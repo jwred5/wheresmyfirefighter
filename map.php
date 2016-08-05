@@ -17,7 +17,7 @@
 		$query_array = array(
 			'client_id'			=>	$client_id,
 			'response_type'		=>	'code',
-			'redirection_uri'	=>	'https://' . $_SERVER[HTTP_HOST] . $_SERVER[REQUEST_URI],
+			'redirection_uri'	=>	$redirect_uri,
 			'scope'				=>	'read_agency read_device'
 		);
 		header('Location: ' . $authorization_url . '?' . http_build_query($query_array));
